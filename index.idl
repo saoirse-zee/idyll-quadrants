@@ -1,0 +1,9 @@
+[meta title:"Idyll Quadrants" description:"Short description of your project" /]
+
+[Header
+  title:"Quadrants"
+  subtitle:"A quick demo of a quadrant chart in Idyll & D3." /]
+
+Up and to the right is good. Down and to the left, not so much.
+
+[Quadrant /]
