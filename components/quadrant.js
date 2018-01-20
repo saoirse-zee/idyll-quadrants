@@ -4,15 +4,6 @@ const d3 = require('d3');
 
 const size = 600;
 
-const data = [
-  { x: -0.5, y: 1, },
-  { x: 2, y: 3, },
-  { x: 3, y: -2, },
-  { x: 4, y: 0.5, },
-  { x: 4.5, y: -4, },
-  { x: -3.5, y: -3, },
-]
-
 const xScale = d3.scaleLinear()
   .domain([-5, 5])
   .range([10, 550])
@@ -39,6 +30,8 @@ const projectionLine =
 class Quadrant extends D3Component {
 
   initialize(node, props) {
+    const { data = [] } = props
+    console.log(data);
     const svg = this.svg = d3.select(node).append('svg');
 
     svg.attr('viewBox', `0 0 ${size} ${size}`)

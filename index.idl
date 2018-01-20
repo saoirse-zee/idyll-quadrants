@@ -6,4 +6,15 @@
 
 Up and to the right is good. Down and to the left, not so much.
 
-[Quadrant /]
+[data name:"one" source:"one.json" /]
+[data name:"two" source:"two.json" /]
+[data name:"three" source:"three.json" /]
+
+### Group 1
+[Quadrant data:one /]
+
+### Group 2
+[Quadrant data:two /]
+
+### Group 3
+[Quadrant data:three /]
