@@ -27,11 +27,26 @@ const projectionLine =
     .y(d => yScale(d.y))
     .curve(d3.curveCatmullRom.alpha(0.5))
 
+function handleMouseover(d) {
+  console.log(d);
+  const node = d3.select(this)
+  node.append("text")
+      .attr("dx", 25)
+      .attr("dy", ".35em")
+      .attr('class', 'label')
+      .text(d => d.group)
+}
+
+function handleMouseout() {
+  const node = d3.select(this)
+  node.select("text")
+      .remove()
+}
+
 class Quadrant extends D3Component {
 
   initialize(node, props) {
     const { data = [] } = props
-    console.log(data);
     const svg = this.svg = d3.select(node).append('svg');
 
     svg.attr('viewBox', `0 0 ${size} ${size}`)
@@ -51,12 +66,13 @@ class Quadrant extends D3Component {
     svg.selectAll('circle')
       .data(data)
       .enter()
-      .append('circle')
-      .attr('cx', d => xScale(d.x))
-      .attr('cy', d => yScale(d.y))
-      .attr('r', 20)
-      .attr('fill', 'steelblue')
-      .attr('opacity', '0.5')
+      .append('g')
+      .attr('class', 'node')
+      .on('mouseover', handleMouseover)
+      .on('mouseout', handleMouseout)
+      .attr('transform', d => `translate (${xScale(d.x)},${yScale(d.y)})`)
+        .append('circle')
+        .attr('r', 20)
   }
 }
 

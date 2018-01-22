@@ -1,8 +1,15 @@
 [
-  { "x": 0.5, "y": 1 },
-  { "x": -2, "y": 3 },
-  { "x": 3.6, "y": -2 },
-  { "x": -4, "y": 0.5 },
-  { "x": 0.5, "y": -4 },
-  { "x": -3.5, "y": -3 }
+  { "x": 0.5, "y": 1.3, "group": "Technician" },
+  { "x": -2, "y": 3.3, "group": "Technician" },
+  { "x": -3, "y": -2, "group": "Technician" },
+  { "x": -4, "y": 0.5, "group": "Technician" },
+  { "x": -4.5, "y": -4, "group": "Technician" },
+  { "x": 3.5, "y": -3, "group": "Technician" },
+  { "x": 3, "y": -2, "group": "Nurse" },
+  { "x": 4.5, "y": 0, "group": "Nurse" },
+  { "x": -4.5, "y": -2.3, "group": "Nurse" },
+  { "x": 3.5, "y": 3.2, "group": "Nurse" },
+  { "x": 4, "y": -0.5, "group": "Nurse" },
+  { "x": -1.5, "y": -2.6, "group": "Manager" },
+  { "x": 2.5, "y": -3.3, "group": "Manager" }
 ]
